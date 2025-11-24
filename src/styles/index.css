@@ -15,8 +15,8 @@
 
   --story-text: #666666;
 
-  --primary-font-family: "Quicksand", sans-serif;
-  --secondary-font-family: "Playfair Display", Georgia;
+  --primary-font-family: "Quicksand Variable", sans-serif;
+  --secondary-font-family: "Playfair Display Variable", Georgia;
 }
 
 @media (prefers-color-scheme: dark) {
