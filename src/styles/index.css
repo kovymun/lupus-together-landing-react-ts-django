@@ -195,7 +195,9 @@ a {
   text-decoration: none;
   font-weight: bold;
   cursor: pointer;
-  transition: background-color 300ms ease, transform 300ms ease;
+  transition:
+    background-color 300ms ease,
+    transform 300ms ease;
 }
 
 .site-btn:hover {
