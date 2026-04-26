@@ -1,34 +1,23 @@
 ## Lupus Together Community Website: React + TypeScript Frontend | Python Django Backend | Neon Serverless PostgreSQL
 
-![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react) ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript) ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white) ![Django](https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white) ![CSS](https://img.shields.io/badge/CSS-1572B6?style=for-the-badge&logo=css3) ![React Scroll](https://img.shields.io/badge/React--Scroll-61DAFB?style=for-the-badge) ![React Icons](https://img.shields.io/badge/React--Icons-000000?style=for-the-badge) ![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white) ![SQLite](https://img.shields.io/badge/SQLite-003B57?style=for-the-badge&logo=sqlite&logoColor=white) ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white) ![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white) ![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white) ![Axe DevTools](https://img.shields.io/badge/Axe%20DevTools-663399?style=for-the-badge&logo=axe&logoColor=white) ![Google Lighthouse](https://img.shields.io/badge/Google%20Lighthouse-F44B21?style=for-the-badge&logo=lighthouse&logoColor=white) ![Cypress](https://img.shields.io/badge/Cypress-17202C?style=for-the-badge&logo=cypress&logoColor=white)
+> A full-stack awareness platform for the Lupus community, built in honour of a family member living with the condition, powered by React + TypeScript, Django REST API, and deployed on Vercel + Render.
 
 ---
 
 ### Table of Contents
 
-- [Overview](#overview)
-- [Highlights](#highlights)
-- [Features](#features)
-- [Notes](#notes)
-- [Tech Stack](#tech-stack)
-- [Installation Guide](#installation-guide)
-- [Usage Guide](#usage-guide)
-- [Production Deployment](#production-deployment)
-- [Screenshots](#screenshots)
-- [Security](#security)
-- [Testing](#testing)
-- [Performance](#performance)
-- [Future Plans](#future-plans)
-- [Acknowledgment](#acknowledgment)
-- [Disclaimer](#disclaimer)
-- [Credits](#credits)
-- [Contact](#contact)
+- [Preview](#preview)
+- [Tech Stack](tech-stack)
 
 ---
 
-### Overview
+### Preview
 
-**Lupus Together** is a compassionate, community focused awareness site built with **React + TypeScript** and powered by a secure **Django REST API**. Inspired by a loved one's journey with Lupus, this project blends human centered design with production style development to create a digital space for awareness, connection, and support.
+🔗 **Live Demo:** [Lupus Together](https://lupustogether.vercel.app/)
+
+> Backend on Render free tier, allow a few seconds on first load.
+
+** ADD THREE MOST PROMINENT SCREENSHOTS **
 
 ---
 
@@ -56,39 +45,16 @@
 
 ---
 
-### Notes
-
-- This project uses free-tier hosting (Vercel, Render, Neon), which may introduce short cold-start delays on the backend.
-- The architecture, deployment pipeline, and security decisions are designed to reflect real world software development/engineering practices.
-- API endpoints are secured via a shared-secret token mechanism for safe POST submissions in a public environment.
-
----
-
 ### Tech Stack
 
 **Frontend:**
-
-- React (Functional Components)
-- TypeScript
-- Vanilla CSS
-- Vite
-- React Hook Form
-- React Icons
-- React Scroll
+![React](https://img.shields.io/badge/React-20232A?style=flat&logo=react&logoColor=61DAFB) ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=flat&logo=typescript&logoColor=white) ![CSS](https://img.shields.io/badge/CSS-1572B6?style=flat&logo=css3&logoColor=white) ![Vite](https://img.shields.io/badge/Vite-646CFF?style=flat&logo=vite&logoColor=white)
 
 **Backend:**
-
-- Python
-- Django + Django REST Framework (DRF)
-- SQLite (development/testing)
-- PostgreSQL (production)
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white) ![Django](https://img.shields.io/badge/Django-092E20?style=flat&logo=django&logoColor=white) ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=flat&logo=postgresql&logoColor=white) ![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat&logo=docker&logoColor=white)
 
 **Testing & QA:**
-
-- pytest, pytest-django, coverage
-- Cypress (E2E)
-- Axe DevTools
-- Google Lighthouse
+![Cypress](https://img.shields.io/badge/Cypress-17202C?style=flat&logo=cypress&logoColor=white) ![Axe DevTools](https://img.shields.io/badge/Axe%20DevTools-663399?style=flat&logo=axe&logoColor=white) ![Google Lighthouse](https://img.shields.io/badge/Google%20Lighthouse-F44B21?style=flat&logo=lighthouse&logoColor=white)
 
 ---
 
