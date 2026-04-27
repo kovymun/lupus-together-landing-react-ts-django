@@ -13,6 +13,9 @@
 - [Security](#security)
 - [Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
+- [Testing](#testing)
+- [Future Plans](#future-plans)
+- [Credits & Contact](#credits--contact)
 
 ---
 
@@ -22,7 +25,11 @@
 
 > Backend on Render free tier, allow a few seconds on first load.
 
-** ADD THREE MOST PROMINENT SCREENSHOTS **
+<p align="center">
+  <img width="250" alt="lt-hero" src="https://github.com/user-attachments/assets/c503a1f7-f6dc-4cf4-9e4a-e289fd04de59" />
+  <img width="250" alt="lt-social-proof" src="https://github.com/user-attachments/assets/a68d81e9-1b84-48a4-93f2-ebaba5200edc" />
+  <img width="250" alt="lt-form" src="https://github.com/user-attachments/assets/bff2507e-29b3-4e39-a0f0-ad2dbc8b96ed" />
+</p>
 
 ---
 
@@ -139,32 +146,17 @@ docker-compose build && docker-compose up
 
 ### Future Plans
 
-- **Scroll-triggered Animations**: for a smoother, more interactive visual experience.
-- **Migrate to Astro.js**: for improved app performance and enhanced SEO/GEO capabilities.
+- **Scroll-triggered Animations:** smoother, more interactive visual experience.
+- **Migrate to Astro.js:** improved performance and enhanced SEO/GEO capabilities.
 
 ---
 
-### Acknowledgment
+### Credits & Contact
 
-Inspired by a family member who battles Lupus daily. This project is a tribute to their strength, and to those navigating this journey around the world.
+**Developer & Designer:** [Koveshan Munsami](https://www.linkedin.com/in/koveshan-munsami/)
 
----
+Built in honour of a family member living with Lupus daily.
 
-### Disclaimer
-
-All names, services, testimonials, locations, and brand references, including _Lupus Together_, are fictional and created for the sole purpose of demonstrating software development, UI/UX design, and implementation best practices. Any resemblance to real individuals or organizations is purely coincidental. _Note: This is project intended to showcase UI/UX thinking, design sensitivity, and modern web development techniques._
-
-Images used are royalty-free and sourced from **[Unsplash](https://unsplash.com/)** and **[Lummi AI](https://www.lummi.ai/)** , optimized for performance (WebP format). **Social links** included are placeholders to demonstrate UI layout and design.
+**Disclaimer:** All names, testimonials, and brand references are fictional, created solely to demonstrate software development and UI/UX best practices. Images sourced from [Unsplash](https://unsplash.com/) and [Lummi AI](https://www.lummi.ai/), optimized for performance in WebP format.
 
 ---
-
-### Credits
-
-- **Sole Developer & Designer:** Koveshan Munsami
-- **Inspiration:** A family member who lives with Lupus daily. This is for them, and for all who need a gentle place to land.
-
----
-
-### Contact
-
-- Connect with me on [LinkedIn](https://www.linkedin.com/in/koveshan-munsami/)
