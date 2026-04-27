@@ -117,57 +117,23 @@ docker-compose build && docker-compose up
 
 ### Testing
 
-**Front-end testing:**
+**E2E Testing (Cypress):**
 
-All core features and UI components have been thoroughly tested for reliability, accessibility, and responsiveness.
+| Test            | Coverage                                                                             |
+| --------------- | ------------------------------------------------------------------------------------ |
+| Navbar scroll   | All nav links, hamburger menu, desktop and tablet viewports                          |
+| Hero CTA        | Scrolls correctly to Join section                                                    |
+| Join form       | Field validation, error handling, submission, form reset, duplicate email protection |
+| Token handshake | Valid token succeeds · invalid or missing token returns `401 Unauthorized`           |
 
-**Accessibility Audit:**
+**Backend Integration Tests (pytest):**
 
-- **Purpose:** To enhance inclusivity and usability for all users, ensuring the application is accessible to those using assistive technologies and compliant with **WCAG 2.1 AA** standards.
-- **Summary:** Conducted a complete accessibility audit using **Axe DevTools** and **Google Lighthouse**. Key improvements included proper ARIA usage, improved keyboard navigation, better color contrast, and semantic HTML structure across all interactive components.
-- **Tools Used:** **Google Lighthouse** (Web Accessibility Audit) and **Axe DevTools** (In-depth Element Level Testing).
-- **Results:** The accessibility score improved from **83% to 100%**, ensuring compliance with modern accessibility standards and a more inclusive user experience.
-
-**E2E and QA Testing(Cypress):**
-
-1. **Navbar Scroll functionality:** We implemented an end-to-end test using Cypress to verify the Navbar's scroll behavior:
-
-- Ensures each navigation link scrolls the user to the correct section.
-- Handles mobile view by opening the hamburger menu automatically.
-- Tested across multiple viewports: _desktop and tablet_.
-- Validates smooth scroll and section visibility for a reliable user experience.
-
-2. **Hero CTA Interaction:**
-
-- **TEST:** Hero CTA scroll behavior
-- Purpose: Ensure that clicking the Hero "Join Our Community!" CTA scrolls smoothly to the Join section.
-
-3. **Join Form Validation & Submission:**
-
-- Checks inline validation messages for all required fields (first name, last name, email, phone, consent checkbox).
-- Validates error handling for invalid inputs.
-- Tests successful form submission with valid data and confirms form reset afterward.
-- Ensures that duplicate emails trigger the correct error toast and prevent multiple entries.
-- Confirms that the _frontend-backend shared secret token handshake_ works as expected during submission.
-
-**Back-end testing (Django + Pytest):**
-
-**Integration tests:**
-
-This section tracks backend tests as they are added. Each test includes a short reason and a status to keep things easy to follow.
-
-| Test Type                         | Description                                                                                                                                                                            | Result |
-| --------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------ |
-| Model test                        | Confirms that the CommunityMember model can be created, behaves as expected, and that user details are saved to the database correctly.                                                | PASSED |
-| Serializer validation tests       | Ensures that the CommunityMemberSerializer correctly validates input data, enforcing required fields and constraints. Includes checks for missing fields like first_name or last_name. | PASSED |
-| Views test                        | Confirms that the `/community/` endpoint correctly handles GET and POST requests with both valid and invalid data.                                                                     | PASSED |
-| POST request duplicate email test | Verifies that submitting a POST request with an email that already exists in the database returns a validation error and prevents duplicate entries.                                   | PASSED |
-
-**Security Tests:**
-
-| Test Name                                            | Description                                                                                                                   | Why It’s Useful                                                                                                                                                                                                                | Result |
-| ---------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------ |
-| **Frontend - Backend Shared Secret Token Handshake** | Verified that requests with the correct shared secret token succeed, and invalid or missing tokens return `401 Unauthorized`. | Protects the backend from unauthorized requests or bots, ensures only your frontend or trusted clients can submit data to sensitive endpoints, and adds a lightweight layer of security even without full user authentication. | PASSED |
+| Test                      | Result    |
+| ------------------------- | --------- |
+| Model                     | ✅ PASSED |
+| Serializer validation     | ✅ PASSED |
+| Views · GET & POST        | ✅ PASSED |
+| Duplicate email rejection | ✅ PASSED |
 
 ---
 
