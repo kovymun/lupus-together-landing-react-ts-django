@@ -1,4 +1,4 @@
-## Lupus Together Community Website: React + TypeScript Frontend | Python Django Backend | Neon Serverless PostgreSQL
+## Lupus Together
 
 > A full-stack awareness platform for the Lupus community, built in honour of a family member living with the condition, powered by React + TypeScript, Django REST API, and deployed on Vercel + Render.
 
@@ -7,7 +7,9 @@
 ### Table of Contents
 
 - [Preview](#preview)
-- [Tech Stack](tech-stack)
+- [Tech Stack](#tech-stack)
+- [Features](#features)
+- [Getting Started](#getting-started)
 
 ---
 
@@ -18,30 +20,6 @@
 > Backend on Render free tier, allow a few seconds on first load.
 
 ** ADD THREE MOST PROMINENT SCREENSHOTS **
-
----
-
-### Highlights
-
-- Thoughtful UI/UX, SEO optimization, and accessibility-first design (WCAG 2.1 AA)
-- Fully responsive design with intuitive navigation (React Scroll)
-- Modern frontend engineering (React, TypeScript, Vite)
-- Secure backend API architecture (Django + DRF, serializer validation)
-- Real-world deployment pipeline (Vercel, Render, Neon Serverless PostgreSQL)
-- Integration, E2E, and quality testing (Cypress, pytest, Axe, Lighthouse)
-
----
-
-### Features
-
-1. Smooth section navigation using **React Scroll**.
-2. Fully responsive layout across mobile, tablet, and desktop.
-3. Content-first, SEO-optimized, accessibility-focused UI/UX.
-4. Modern CSS architecture: Grid, Flexbox, and fluid typography (`clamp()`).
-5. Automatic light/dark theme detection.
-6. WCAG 2.1 AA aligned accessibility implementation.
-7. Full-stack form validation (frontend + backend).
-8. Secure POST submissions via a **shared-secret token handshake**.
 
 ---
 
@@ -58,100 +36,56 @@
 
 ---
 
-### Installation Guide
+### Features
 
-Follow these steps to set up the project on your local machine, and run both the frontend and backend locally.
+- **Accessibility:** WCAG 2.1 AA, audited from 83% to 100% using Axe DevTools and Lighthouse.
+- **Typography:** Fluid layout with CSS `clamp()` across mobile, tablet, and desktop.
+- **Theming:** Automatic light/dark theme detection.
+- **Validation:** Full-stack form validation with duplicate entry protection.
+- **Security:** Secure POST submissions via a shared-secret token handshake.
+- **Testing:** E2E tested with Cypress across desktop and tablet viewports.
 
-#### Pre-requisites:
+---
 
-- **Node.js** (v18 or later), which includes npm by default. [Node.js](https://nodejs.org/en)
-- **Docker Desktop** installed and running on your machine. [Docker Desktop](https://www.docker.com/products/docker-desktop).
-- **Concurrently** is included as a dependency in this project, so no global installation is required.
-- Ensure you create your own `.env` file in the `frontend` and `backend` folders to store secrets and sensitive credentials.
+### Getting Started
 
-#### Steps:
+#### Prerequisites
 
-1. **Create a directory for the project:** Open your terminal and run mkdir `<your-directory-name>` | cd `<your-directory-name>`.
-2. **Open the folder in VS Code:** run `code .`
-3. **Clone the repository:** git clone https://github.com/kovymun/lupus-together-landing-react-ts-django.git
-4. **Navigate into the project folder:** cd lupus-together-landing-react-ts-django-main
-5. **Install frontend dependencies:** npm install or npm i
-6. **Start the development server:** Navigate to the root folder, and run `npm start`. The app should now be running locally on localhost in the browser of your choice.
+- [Node.js](https://nodejs.org/en) v18+
+- [Docker Desktop](https://www.docker.com/products/docker-desktop) installed and running
+- `.env` file required in both `frontend/` and `backend/` — see `.env.example` for reference
 
-**Optional Frontend only:**
-`npm run dev`
+#### Quick Start (Full Stack)
 
-**Optional Backend only:**
-
+```bash
+git clone https://github.com/kovymun/lupus-together-landing-react-ts-django.git
+cd lupus-together-landing-react-ts-django-main
+npm install
+npm start
 ```
+
+Frontend runs on `http://localhost:5173` · Backend runs on `http://localhost:8000`
+
+#### Run Individually
+
+**Frontend only:**
+
+```bash
+npm run dev
+```
+
+**Backend only:**
+
+```bash
 cd backend
 docker-compose up
 ```
 
-**Backend setup notes:** If you make changes to backend dependencies or the Dockerfile, rebuild the container. Your backend will run on http://localhost:8000. Ensure Docker Desktop is running before starting the project, otherwise the backend container will fail to start.
+> If you modify backend dependencies or the Dockerfile, rebuild first:
 
+```bash
+docker-compose build && docker-compose up
 ```
-cd backend
-docker-compose build
-docker-compose up
-```
-
----
-
-### Usage Guide
-
-This website/landing page is structured into several key sections designed to guide visitors and create a meaningful experience:
-
-- Hero Section
-- About Lupus Together
-- Understanding Lupus
-- Testimonial Section
-- Meet the Team
-- Join the Community Form
-- Footer with contact and legal info
-
-#### How to Use:
-
-1. **Start the Application:** Set up and run the project locally using the steps in the [Installation Guide](#installation-guide), or explore the live site here: [Lupus Together](https://lupustogether.vercel.app/).
-2. **Explore the Hero Section:** Once the app loads, you’ll be welcomed with a hero banner representing Lupus Together.
-3. **Navigate Smoothly:** Scroll or click through the navigation bar to explore each section. Smooth scrolling is enabled for a seamless experience.
-4. **Learn About Lupus Together:** Get to know the purpose behind the platform, what it offers, how it started, and how it supports individuals and families.
-5. **Understand Lupus:** The _Understanding Lupus_ section presents facts in a warm, accessible tone, empowering users with knowledge.
-6. **Feel the Human Stories:** The testimonial section features powerful community voices to help users feel seen and connected.
-7. **Meet the Team:** Discover the faces behind the platform, the people dedicated to fostering support.
-8. **Join the Community:** Fill out the form to express interest in becoming part of the Lupus Together support circle.
-
----
-
-### Production Deployment
-
-This project is deployed using modern, production capable platforms using free tier plans, and configured for real world demonstration. You can access the live application here: [Lupus Together](https://lupustogether.vercel.app/)
-
-1. **Frontend (React + TypeScript):** Deployed on **Vercel** using its free tier, providing fast static delivery and global CDN caching.
-2. **Backend (Django REST API):** Hosted on **Render** (free tier) with automatic builds and zero downtime deploys during updates.
-3. **Database:** Backed by **Neon Serverless PostgreSQL** (free tier): a cloud native, scalable database service. [Neon](https://neon.com/)
-
-**Note:** This deployment uses free tier plans suitable for demonstration. While the stack is production capable, free tiers may introduce limits such as sleeping or reduced performance under heavy load, but the deployment architecture follows industry standard practices.
-
----
-
-### Screenshots
-
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 16px;">
-
-  <img src="https://github.com/user-attachments/assets/05e3200e-2292-46a8-8406-d82d31184281" alt="Lupus Together Hero section" />
-
-  <img src="https://github.com/user-attachments/assets/cb6f361f-b895-4383-81bd-814cad9ff855" alt="Lupus Together About section" />
-
-  <img src="https://github.com/user-attachments/assets/896c5ea3-a8c7-40a5-adc6-e4ef93a12e13" alt="Lupus Together Understanding Lupus section" />
-
-  <img src="https://github.com/user-attachments/assets/ea950122-8ca7-4bf0-87d1-8dfac3efcfae" alt="Lupus Together Testimonial section" />
-
-  <img src="https://github.com/user-attachments/assets/49389ba8-c0b6-4ba0-8063-888f8387f89b" alt="Additional screenshot" />
-
-  <img src="https://github.com/user-attachments/assets/8c1d78f0-b7eb-4508-b6e3-cb1b2a102cc2" alt="Additional screenshot" />
-
-</div>
 
 ---
 
