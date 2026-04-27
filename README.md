@@ -9,7 +9,10 @@
 - [Preview](#preview)
 - [Tech Stack](#tech-stack)
 - [Features](#features)
+- [Performance](#performance)
+- [Security](#security)
 - [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
 
 ---
 
@@ -44,6 +47,29 @@
 - **Validation:** Full-stack form validation with duplicate entry protection.
 - **Security:** Secure POST submissions via a shared-secret token handshake.
 - **Testing:** E2E tested with Cypress across desktop and tablet viewports.
+
+---
+
+### Performance
+
+Audited with Google Lighthouse:
+
+| Metric             | Score |
+| ------------------ | ----- |
+| **Performance**    | 95+   |
+| **Accessibility**  | 100   |
+| **Best Practices** | 100   |
+| **SEO**            | 100   |
+
+---
+
+### Security
+
+| Feature                   | Description                                                                                                      |
+| ------------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| **Shared Secret Token**   | Frontend includes a secret key in `.env`. Verified by the backend on every request to block unauthorized access. |
+| **Serializer Validation** | All incoming data passes through DRF serializers before saving, preventing malformed or malicious input.         |
+| **CORS Policy**           | Restricted to trusted origins only, not Django's default open configuration.                                     |
 
 ---
 
@@ -86,19 +112,6 @@ docker-compose up
 ```bash
 docker-compose build && docker-compose up
 ```
-
----
-
-### Security
-
-**Backend Security Measures**
-
-| Security Feature                           | Description                                                                                   | Why                                                       |
-| ------------------------------------------ | --------------------------------------------------------------------------------------------- | --------------------------------------------------------- |
-| **Frontend - Backend Shared Secret Token** | The frontend includes a secret key stored in `.env`. The backend verifies it on each request. | Ensures only trusted frontend clients can access the API. |
-| **Serializer Validation**                  | All data passes through DRF serializers before saving.                                        | Prevents malformed or malicious data.                     |
-| **CSRF & CORS Middleware**                 | Default Django middleware enabled.                                                            | Restricts cross-origin and CSRF attacks.                  |
-| **Environment Variables**                  | Secrets and credentials stored in `.env`.                                                     | Protects sensitive information from exposure.             |
 
 ---
 
@@ -155,21 +168,6 @@ This section tracks backend tests as they are added. Each test includes a short 
 | Test Name                                            | Description                                                                                                                   | Why It’s Useful                                                                                                                                                                                                                | Result |
 | ---------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------ |
 | **Frontend - Backend Shared Secret Token Handshake** | Verified that requests with the correct shared secret token succeed, and invalid or missing tokens return `401 Unauthorized`. | Protects the backend from unauthorized requests or bots, ensures only your frontend or trusted clients can submit data to sensitive endpoints, and adds a lightweight layer of security even without full user authentication. | PASSED |
-
----
-
-### Performance
-
-**Lighthouse Performance Summary:**
-
-The site has been tested using Google Lighthouse to ensure modern web quality and performance benchmarks are met. Current scores:
-
-| Metric             |    Score |
-| ------------------ | -------: |
-| **Performance**    | 95 - 100 |
-| **Accessibility**  |      100 |
-| **Best Practices** |      100 |
-| **SEO**            |      100 |
 
 ---
 
