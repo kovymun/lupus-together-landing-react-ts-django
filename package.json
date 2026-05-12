@@ -44,7 +44,10 @@
     "typescript-eslint": "^8.59.0",
     "vite": "^7.3.2"
   },
-  "overrides": {
-    "yauzl": ">=3.2.1"
+  "pnpm": {
+    "overrides": {
+      "yauzl": ">=3.2.1",
+      "@babel/plugin-transform-modules-systemjs": "^7.29.4"
+    }
   }
 }
